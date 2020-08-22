@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for, session
 from account.account import Users
+from .image_gen import generate_image
 
 home = Blueprint('home', __name__, static_folder='static', template_folder='templates')
 
@@ -22,7 +23,10 @@ def homepage():
             user_id = user_data.id
             caption = f'Your account number: {user_id}'
 
+            image = generate_image(username)
+
             username = username.replace(' ', u'\u00a0')
-            return render_template('home.html', username=username, caption=caption)
+            return render_template('home.html', username=username,
+                                   caption=caption, image=image)
         else:
             return redirect(url_for('account.login'))

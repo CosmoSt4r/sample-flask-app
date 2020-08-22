@@ -33,7 +33,7 @@ def login():
                 return redirect(url_for('home.homepage'))
             else:
                 # password doesn't match
-                return render_template('login.html')
+                return redirect(url_for('account.login'))
         else:
             # user isn't existing
             return render_template('login.html')
