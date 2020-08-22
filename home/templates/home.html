@@ -23,6 +23,18 @@
       {{ username }}
     </div>
 
+    <div class="container">
+
+      <a href="some_page">
+        <img src="{{ url_for('home.static', filename='images/profiles/andrey.jpg') }}"
+             alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">What is this?</div>
+        </div>
+      </a>
+
+    </div>
+
 
     <form method="POST">
       <div class="container-logout100-form-btn">
@@ -31,6 +43,10 @@
         </button>
       </div>
     </form>
+
+    <div class="text">This is a special computer generated ornament.
+        It is based on your username. There are 800 billion variants of this ornament.
+        Try to find two of the same ;)</div>
 
   </body>
 </html>

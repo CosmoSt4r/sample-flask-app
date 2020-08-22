@@ -3,6 +3,12 @@
   src: url("https://acupoftee.github.io/fonts/Clip.ttf");
 }
 
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+
 body {
   background-color: #141114;
   background-image: linear-gradient(335deg, black 23px, transparent 23px),
@@ -230,4 +236,51 @@ body {
   to {
     opacity: 1;
   }
+}
+
+.container {
+  position: absolute;
+  width: 15%;
+
+  right: 5%;
+  top: 5%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: 50px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #9152f8;
+
+  border-radius: 50px;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  font-family: Poppins-Regular;
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
