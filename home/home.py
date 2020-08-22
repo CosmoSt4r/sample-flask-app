@@ -1,4 +1,7 @@
-from flask import Blueprint, render_template, request, redirect, url_for, session
+from flask import (
+    Blueprint, render_template, flash,
+    request, redirect, url_for, session)
+
 from account.account import Users
 from .image_gen import generate_image
 
@@ -11,7 +14,7 @@ def homepage():
         # POST #
 
         session.pop('user', None)
-
+        flash('You have been logged out', 'info')
         return redirect(url_for('account.login'))
     else:
         # GET #
