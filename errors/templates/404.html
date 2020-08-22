@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Home page</title>
+
+    <link rel="stylesheet" href="{{ url_for('home.static', filename='css/style.css') }}" />
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('account.static', filename='css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('account.static', filename='css/main.css') }}">
+
+
+  </head>
+  <body>
+
+    <div class="sign_caption">
+      Page not found
+    </div>
+
+    <div class="sign">
+      404 Error
+    </div>
+
+    <form method="POST">
+      <div class="container-logout100-form-btn">
+        <button class="logout100-form-btn">
+          Home
+        </button>
+      </div>
+    </form>
+
+  </body>
+</html>
