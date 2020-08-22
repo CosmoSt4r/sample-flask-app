@@ -41,6 +41,14 @@
 						Log in
 					</span>
 
+					{% with messages = get_flashed_messages() %}
+						{% if messages %}
+							{% for msg in messages %}
+									<p class="txt1" align="center">{{msg}}</p>
+							{% endfor %}
+						{% endif %}
+					{% endwith %}
+
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="username" placeholder="Username">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
