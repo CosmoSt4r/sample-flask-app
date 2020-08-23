@@ -28,10 +28,18 @@ def homepage():
             user_id = user_data.id
             caption = f'Your account number: {user_id}'
 
-            image = generate_image(username)
+            img = generate_image(username)
 
             username = username.replace(' ', u'\u00a0')
             return render_template('home.html', username=username,
-                                   caption=caption, image=image)
+                                   caption=caption, image=img)
         else:
             return redirect(url_for('account.login'))
+
+
+@home.route('/image', methods=['GET', 'POST'])
+def image():
+    username = session.get('user')
+    image_link = url_for('home.static', filename=f'images/profiles/{username}.jpg')
+
+    return render_template('image.html', image_link=image_link)

@@ -284,3 +284,25 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.image_container {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.image_container_block {
+  width: 30%;
+  border-radius: 50px;
+}
+
+.image_container_text {
+
+  font-family: Poppins-Regular;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+}

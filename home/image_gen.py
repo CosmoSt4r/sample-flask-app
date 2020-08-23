@@ -1,4 +1,5 @@
 from PIL import Image, ImageDraw, ImageOps
+from flask import url_for
 from pypasswords import hash_it
 import os.path
 
@@ -7,7 +8,6 @@ def generate_image(keyword):
 
     image_path = f'home/static/images/profiles/{keyword}.jpg'
     if not os.path.isfile(image_path):
-        print('generating')
 
         hashed_keyword = hash_it(keyword, hash_type='sha512')
         pre_ground = [int(char) // 4 for char in hashed_keyword if char.isdigit()][::2][:25]
@@ -46,4 +46,6 @@ def generate_image(keyword):
         final_img.paste(ImageOps.flip(ImageOps.mirror(img)), (500, 500))
 
         final_img.save(image_path)
-    return image_path
+    return url_for('home.static', filename=f'images/profiles/{keyword}.jpg')
+
+

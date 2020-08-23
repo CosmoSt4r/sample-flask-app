@@ -1,48 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Home page</title>
 
     <link rel="stylesheet" href="{{ url_for('home.static', filename='css/style.css') }}" />
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('account.static', filename='css/util.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('account.static', filename='css/main.css') }}">
 
+    <title>Personal Image</title>
+</head>
+<body>
 
-  </head>
-  <body>
-
-
-    <div class="sign_caption">
-      {{ caption }}
+    <div class="image_container">
+        <img src="{{ image_link }}" class="image_container_block">
+        <p class="image_container_text">This is a special computer generated ornament.
+        It is based on your username. There are 800 billion variants of this ornament.
+        Try to find two of the same ;)</p>
     </div>
 
-    <div class="sign">
-      {{ username }}
-    </div>
-
-    <div class="container">
-
-      <a href="{{ url_for('home.image') }}">
-        <img src="{{ image }}"
-             alt="Avatar" class="image">
-        <div class="overlay">
-          <div class="text">What is this?</div>
-        </div>
-      </a>
-
-    </div>
-
-
-    <form method="POST">
+    <a href="{{ url_for('home.homepage') }}">
       <div class="container-logout100-form-btn">
         <button class="logout100-form-btn">
-          Logout
+          Home
         </button>
       </div>
-    </form>
+    </a>
 
-  </body>
+</body>
 </html>
