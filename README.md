@@ -1,7 +1,8 @@
-﻿# Sample Flask application
+# Sample Flask application
 
 > Implemented systems of login, logout, registration and one interesting feature.
 
+###
 
 ## What can I do with this?
 
@@ -15,6 +16,8 @@ You will see a **beautiful inscription** with your name, **account number** and 
 ### What is personal pattern?
 
 Click on it and find out!
+
+###
 
 ## How to install?
 
@@ -48,6 +51,7 @@ python main.py
 
 Open your browser and go to the `127.0.0.1:5000` address. You will see the login page.
 
+###
 
 ## Why do we need this packages?
 
@@ -78,6 +82,8 @@ Open your browser and go to the `127.0.0.1:5000` address. You will see the login
 ![Pattern mirroring](https://github.com/CosmoSt4r/sample-flask-app/blob/master/readme/Pattern_mirroring.png?raw=true)
 
 - The **number of possible combinations**: there are only 25 unique pixels to fill 3 colors are used. This means the number of possible combinations is **3<sup>25</sup>**. (more than 840 billion)
+
+###
 
 ## Where did I get such beautiful HTML and CSS templates?
 
