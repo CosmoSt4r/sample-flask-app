@@ -1,25 +1,32 @@
-# Sample Flask application
+﻿# Sample Flask application
 
 > Implemented systems of login, logout, registration and one interesting feature.
 
-###
 
 ## What can I do with this?
 
 ![Login and Signup forms](https://github.com/CosmoSt4r/sample-flask-app/blob/master/readme/Login_Signup.png?raw=true)
 
+__________
+
 You can *register* or *login* if you already have an account.
 You will see a **beautiful inscription** with your name, **account number** and **personal pattern**.
 
+_________
+
 ![Homepage](https://github.com/CosmoSt4r/sample-flask-app/blob/master/readme/Homepage.png?raw=true)
+
+_________
 
 ### What is personal pattern?
 
 Click on it and find out!
 
-###
+<br>
 
 ## How to install?
+
+
 
 ### Clone
 
@@ -51,14 +58,14 @@ python main.py
 
 Open your browser and go to the `127.0.0.1:5000` address. You will see the login page.
 
-###
+<br>
 
 ## Why do we need this packages?
 
 ### SQLAlchemy
 - The **SQLAlchemy** package is used to **store information** about users with an **SQLite database** connected to it.
 
-###
+<br>
 
 ### Pypasswords
 - Upon login, the **password** from the form is compared with the **hash** stored in the database using the method
@@ -69,7 +76,7 @@ Open your browser and go to the `127.0.0.1:5000` address. You will see the login
 - When user is registering new account, the **password** from the form is **hashed** with the **sha-256** algorithm using the function
 **hash_it** from the same **pypasswords** package and along with the login is added to the database.
 
-###
+<br>
 
 ### Pillow
 
@@ -83,7 +90,7 @@ Open your browser and go to the `127.0.0.1:5000` address. You will see the login
 
 - The **number of possible combinations**: there are only 25 unique pixels to fill 3 colors are used. This means the number of possible combinations is **3<sup>25</sup>**. (more than 840 billion)
 
-###
+<br>
 
 ## Where did I get such beautiful HTML and CSS templates?
 
