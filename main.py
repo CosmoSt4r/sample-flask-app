@@ -15,7 +15,7 @@ app.secret_key = 'hello'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-app.permanent_session_lifetime = timedelta(minutes=1)
+app.permanent_session_lifetime = timedelta(days=30)
 
 users_db.init_app(app)
 
@@ -36,4 +36,4 @@ def invalid_route(e):
 if __name__ == '__main__':
     with app.app_context():
         users_db.create_all()
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0')
